@@ -12,12 +12,15 @@ public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         List<Double> list = new ArrayList<>();
-        System.out.println("El valor de S es: " + resultado(10, list, reader));
+        System.out.println("Ingrese cantidad de la muestra: ");
+        int cantidad = Integer.parseInt(reader.readLine());
+        System.out.println("El valor de S es: " + resultado(cantidad, list, reader));
     }
 
     public static double resultado(int cantidad, List<Double> list, BufferedReader reader) throws IOException {
         double prom;
         double res = 0;
+        System.out.println("Ingrese valores (presione enter despues de cada uno): ");
         for(int i = 0; i < cantidad; i++){
             double aux = Float.parseFloat(reader.readLine());
             list.add(aux);
